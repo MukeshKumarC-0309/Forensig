@@ -1,0 +1,12 @@
+# Forensic-to-Detection Pipeline — runtime dependencies (Python 3.14)
+# Install into a venv:  python -m venv .venv && .venv/Scripts/pip install -r requirements.txt
+volatility3==2.28.0     # memory extraction (pslist/psscan/netscan/malfind/thrdscan/vadinfo)
+yara-x==1.20.0          # YARA rule compile/match gate (yara-python has no py3.14 wheel)
+capstone==5.0.9         # disassembly for byte-pattern operand wildcarding
+
+# Optional — sample acquisition/unpacking helpers (NOT required to run the pipeline;
+# used only to fetch/unpack test images during development):
+#   py7zr==1.1.3        # .7z archives
+#   pyzipper==0.4.0     # AES-encrypted .zip (e.g. CyberDefenders, pw: cyberdefenders.org)
+#   inflate64==1.0.4    # Deflate64 .zip
+#   gdown==6.2.0        # Google Drive downloads

@@ -125,3 +125,7 @@ DESIGN.md           authoritative design + decision log (§9 = findings)
 Handle memory images from real infections as untrusted data. This tool reads
 images and emits rules; it never executes sample code. Do not commit real
 malicious samples to a public repository (DESIGN §6).
+
+## License
+
+Released under the [MIT License](LICENSE).
